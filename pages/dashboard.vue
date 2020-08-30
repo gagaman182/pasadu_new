@@ -152,7 +152,6 @@
         <!-- statistic section -->
         <v-flex lg6 sm12 xs12></v-flex>
 
-        <!-- acitivity/chat widget -->
         <v-flex lg6 sm12 xs12> </v-flex>
         <v-flex lg6 sm12 xs12> </v-flex>
         <v-flex lg6 sm12 xs12> </v-flex>
