@@ -65,7 +65,7 @@
                     class="sm6 xs6 flex text-sm-center py-3 light-blue white--text "
                   >
                     <div class="headline">
-                      <span> {{ this.chart_bar[0].data[0].value }} </span>
+                      <span> {{ this.chart_bar[0].data[1].value }} </span>
                     </div>
                     <span class="caption">จอมอนิเตอร์</span>
                   </div>
@@ -127,7 +127,6 @@
               <div class="chart">
                 <pie-chart
                   :data="this.chart_pie"
-                  pie-style="donut"
                   label-position="center"
                   legend
                 />
@@ -135,7 +134,6 @@
             </div>
           </v-widget>
         </v-flex>
-        <!-- social/weather card start -->
 
         <v-flex lg12 sm12 xs12>
           <v-widget
@@ -144,15 +142,55 @@
           >
             <div slot="widget-content">
               <div class="chart">
-                <line-chart :data="this.chart_line" />
+                <line-chart :data="this.chart_line" colors="GOLD" />
               </div>
             </div> </v-widget
         ></v-flex>
 
-        <!-- statistic section -->
-        <v-flex lg6 sm12 xs12></v-flex>
+        <v-flex lg6 sm12 xs12>
+          <v-widget
+            title="10 อันดับ ครุภัณฑ์คอมพิวเตอร์จำแนกประเภทการจัดซื้อ"
+            content-bg="white"
+          >
+            <div slot="widget-content">
+              <div
+                class="chart_line_landscape
+              "
+              >
+                <bar-chart
+                  :data="this.chart_line_landscape"
+                  horizontal
+                  zoom
+                  y-name="การจัดซื้อ"
+                  x-name="จำนวน"
+                  colors="MEDIUMPURPLE"
+                />
+              </div>
+            </div> </v-widget
+        ></v-flex>
 
-        <v-flex lg6 sm12 xs12> </v-flex>
+        <v-flex lg6 sm12 xs12>
+          <v-widget
+            title="10 อันดับ ครุภัณฑ์คอมพิวเตอร์จำแนกประเภทงบประมาณ"
+            content-bg="white"
+          >
+            <div slot="widget-content">
+              <div
+                class="chart_line_landscape
+              "
+              >
+                <bar-chart
+                  :data="this.chart_line_landscape_money"
+                  horizontal
+                  zoom
+                  y-name="'งบประมาณ"
+                  x-name="จำนวน"
+                  colors="SALMON"
+                />
+              </div>
+            </div>
+          </v-widget>
+        </v-flex>
         <v-flex lg6 sm12 xs12> </v-flex>
         <v-flex lg6 sm12 xs12> </v-flex>
         <v-flex lg6 sm12 xs12> </v-flex>
@@ -392,7 +430,100 @@ export default {
         ]
       }
     ],
-    chart_line_landscape: "",
+    chart_line_landscape: [
+      {
+        name: "จำนวน",
+        data: [
+          {
+            label: "ตกลงราคา",
+            value: 3079
+          },
+          {
+            label: "สอบราคา",
+            value: 445
+          },
+          {
+            label: "บริจาค",
+            value: 365
+          },
+          {
+            label: "เฉพาะเจาะจง",
+            value: 192
+          },
+          {
+            label: "ได้มาพร้อมกับได้มาพร้อมกับเครื่องไมโครคอมพิวเตอร์",
+            value: 80
+          },
+          {
+            label: "ได้มาพร้อมกับเครื่องคอมพิวเตอร์ราคารวมกับเครื่อง",
+            value: 60
+          },
+          {
+            label: "ได้มาจากการสำรวจ ปี 61",
+            value: 58
+          },
+          {
+            label: "ประกวดราคา",
+            value: 46
+          },
+          {
+            label: "ได้มาจากการสำรวจปี 2562",
+            value: 23
+          },
+          {
+            label: "ได้มาพร้อมอาคารรังสีรักษา (นาหม่อม)",
+            value: 16
+          }
+        ]
+      }
+    ],
+    chart_line_landscape_money: [
+      {
+        name: "จำนวน",
+        data: [
+          {
+            label: "เงินบำรุง",
+            value: 3002
+          },
+          {
+            label: "เงินบริจาค",
+            value: 314
+          },
+          {
+            label: "เงินประกันสังคม",
+            value: 254
+          },
+          {
+            label: "เงินงบประมาณศูนย์แพทย์",
+            value: 193
+          },
+          {
+            label: "ได้มาจากการสำรวจ",
+            value: 91
+          },
+          {
+            label: "เงินงบประมาณ",
+            value: 90
+          },
+          {
+            label: "เงินบำรุงศูนย์แพทย์",
+            value: 80
+          },
+          {
+            label: "เงินงบสำนักงานประกันสุขภาพแห่งชาติ",
+            value: 78
+          },
+          {
+            label: "เงินงบประมาณศูนย์แพทยศาสตรชั้นคลินิกศึกษา",
+            value: 46
+          },
+          {
+            label: "เงินนอกงบประมาณ",
+            value: 34
+          }
+        ]
+      }
+    ],
 
     color: Material
   }),
@@ -401,6 +532,7 @@ export default {
     this.fetch_chart_bar();
     this.fetch_chart_line();
     this.fetch_chart_line_landscape();
+    this.fetch_chart_line_landscape_money();
   },
 
   methods: {
@@ -436,6 +568,14 @@ export default {
         .then(response => {
           this.chart_line_landscape = response.data;
         });
+    },
+    //แสดง chart_line_landscape
+    async fetch_chart_line_landscape_money() {
+      await axios
+        .get(`${apiPath.getBaseUrl()}pasadu_chart_line_landscape_money.php`)
+        .then(response => {
+          this.chart_line_landscape_money = response.data;
+        });
     }
   }
 };
@@ -444,5 +584,9 @@ export default {
 .chart {
   width: 100%;
   height: 300px;
+}
+.chart_line_landscape {
+  width: 100%;
+  height: 700px;
 }
 </style>

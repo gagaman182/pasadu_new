@@ -4,17 +4,24 @@
 	 include 'conn.php';
 
 
- $sql = "SELECT
-  typecom.NAME as label,
- count(typecom.id) as value
- 
- 
- FROM
-  pasadu
- 
- INNER JOIN typecom ON pasadu.type_group = typecom.id
- GROUP BY typecom.NAME
- ORDER BY  count(typecom.id) desc
+ $sql = "select * from (
+  SELECT
+   pasadu.kmoney as label,
+  count(pasadu.pasaduid) as value
+  
+  
+  
+  FROM
+   pasadu
+  
+  
+  GROUP BY pasadu.kmoney
+  ORDER BY count(pasadu.pasaduid) desc
+  )x
+  where x.label <> ''
+  limit 10
+  
+
  ";
 
 

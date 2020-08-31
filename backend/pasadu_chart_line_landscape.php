@@ -4,17 +4,23 @@
 	 include 'conn.php';
 
 
- $sql = "SELECT
- pasadu.status as name,
-count(pasadu.pasaduid) as value
-
-
-FROM
- pasadu
-where  pasadu.status  is not null
-
-GROUP BY pasadu.status
-ORDER BY pasadu.status
+ $sql = "select * from (
+  SELECT
+   pasadu.tmoney as label,
+  count(pasadu.pasaduid) as value
+  
+  
+  
+  FROM
+   pasadu
+  
+  
+  GROUP BY pasadu.tmoney
+  ORDER BY count(pasadu.pasaduid) desc
+  )x
+  where x.label <> ''
+  limit 10
+  
  ";
 
 
