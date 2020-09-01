@@ -36,7 +36,7 @@
                 </v-form>
               </v-card-text>
               <v-card-actions>
-                <nuxt-link to="/signup">ลงทะเบียนผู้ใช้ใหม่</nuxt-link>
+                <nuxt-link to="/signup">ลงทะเบียนใหม่</nuxt-link>
                 <v-spacer></v-spacer>
                 <v-btn block color="primary" @click="login" :loading="loading"
                   >เข้าสู่ระบบ</v-btn
