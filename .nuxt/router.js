@@ -5,7 +5,6 @@ import { interopDefault } from './utils'
 const _0dea7c3d = () => interopDefault(import('..\\pages\\chat.vue' /* webpackChunkName: "pages_chat" */))
 const _2e4279b7 = () => interopDefault(import('..\\pages\\chat\\contact\\_uuid.vue' /* webpackChunkName: "pages_chat_contact__uuid" */))
 const _6bd03b13 = () => interopDefault(import('..\\pages\\chat\\messaging\\_uuid.vue' /* webpackChunkName: "pages_chat_messaging__uuid" */))
-const _5f6fe000 = () => interopDefault(import('..\\pages\\computer.vue' /* webpackChunkName: "pages_computer" */))
 const _132df8ff = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages_dashboard" */))
 const _5ec7bcb4 = () => interopDefault(import('..\\pages\\dashboard copy.vue' /* webpackChunkName: "pages_dashboard copy" */))
 const _52a8d043 = () => interopDefault(import('..\\pages\\dashboard2.vue' /* webpackChunkName: "pages_dashboard2" */))
@@ -53,6 +52,7 @@ const _e6309810 = () => interopDefault(import('..\\pages\\widgets\\list.vue' /* 
 const _a86b9a72 = () => interopDefault(import('..\\pages\\widgets\\social.vue' /* webpackChunkName: "pages_widgets_social" */))
 const _98448534 = () => interopDefault(import('..\\pages\\widgets\\statistic.vue' /* webpackChunkName: "pages_widgets_statistic" */))
 const _2152c9bd = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
+const _0d921765 = () => interopDefault(import('..\\pages\\_id.vue' /* webpackChunkName: "pages__id" */))
 
 Vue.use(Router)
 
@@ -127,10 +127,6 @@ export function createRouter() {
         component: _6bd03b13,
         name: "chat-messaging-uuid"
       }]
-    }, {
-      path: "/computer",
-      component: _5f6fe000,
-      name: "computer"
     }, {
       path: "/dashboard",
       component: _132df8ff,
@@ -324,6 +320,10 @@ export function createRouter() {
       path: "/",
       component: _2152c9bd,
       name: "index"
+    }, {
+      path: "/:id",
+      component: _0d921765,
+      name: "id"
     }],
 
     fallback: false

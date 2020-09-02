@@ -2,10 +2,10 @@
 	 header('Access-Control-Allow-Origin: *');
    
 	 include 'conn.php';
+   $type_group = $_GET["type_group"];
 
 
-
- $sql = "SELECT * from pasadu where type_group = '1'";
+ $sql = "SELECT * from pasadu where type_group = '".$type_group."' ";
 
 
 $return_arr = array();

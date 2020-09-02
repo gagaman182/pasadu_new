@@ -2,7 +2,7 @@
 	 header('Access-Control-Allow-Origin: *');
    
 	 include 'conn.php';
-  
+   $type_group = $_GET["type_group"];
 
  $sql = "SELECT
  pasadu.status as name,
@@ -11,7 +11,7 @@ count(pasadu.pasaduid) as value
 
 FROM
  pasadu
-
+ where type_group = '".$type_group."'
 
 GROUP BY pasadu.status
 ORDER BY pasadu.status

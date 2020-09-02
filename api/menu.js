@@ -13,21 +13,15 @@ const Menu = [
         component: "widgets",
         icon: "widgets",
         items: [
-            { name: "Social", title: "คอมพิวเตอร์", href: "/computer" },
-            {
-                name: "statistic",
-                title: "จอมอนิเตอร์",
-                badge: "new",
-                href: "/widgets/statistic"
-            },
-            { name: "chart", title: "โน๊ตบุ๊ค", href: "/widgets/chart" },
-            { name: "list", title: "ออนอินวัน", href: "/widgets/list" },
-            { name: "list", title: "ปริ้นเตอร์", href: "/widgets/list" },
-            { name: "list", title: "ปริ้นเตอร์เทอมอล", href: "/widgets/list" },
-            { name: "list", title: "สแกนเนอร์", href: "/widgets/list" },
-            { name: "list", title: "สำรองไฟ", href: "/widgets/list" },
-            { name: "list", title: "เซิฟเวอร์", href: "/widgets/list" },
-            { name: "list", title: "อื่นๆ", href: "/widgets/list" }
+            { name: "Social", title: "คอมพิวเตอร์", href: "/1" },
+            { name: "chart", title: "จอมอนิเตอร์", href: "/2" },
+            { name: "list", title: "โน๊ตบุ๊ค", href: "/3" },
+            { name: "list", title: "ออนอินวัน", href: "/5" },
+            { name: "list", title: "ปริ้นเตอร์", href: "/6" },
+            { name: "list", title: "ปริ้นเตอร์เทอมอล", href: "/7" },
+            { name: "list", title: "สแกนเนอร์", href: "/8" },
+            { name: "list", title: "อื่นๆ", href: "/10" },
+            { name: "list", title: "เซิฟเวอร์", href: "/11" }
         ]
     },
     //   {
