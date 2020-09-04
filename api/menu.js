@@ -11,7 +11,7 @@ const Menu = [
         title: "รายการครุภัณฑ์",
         group: "widgets",
         component: "widgets",
-        icon: "widgets",
+        icon: "devices",
         items: [
             { name: "Social", title: "คอมพิวเตอร์", href: "/1" },
             { name: "chart", title: "จอมอนิเตอร์", href: "/2" },

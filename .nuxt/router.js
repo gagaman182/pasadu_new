@@ -51,6 +51,7 @@ const _8c34d818 = () => interopDefault(import('..\\pages\\widgets\\chart.vue' /*
 const _e6309810 = () => interopDefault(import('..\\pages\\widgets\\list.vue' /* webpackChunkName: "pages_widgets_list" */))
 const _a86b9a72 = () => interopDefault(import('..\\pages\\widgets\\social.vue' /* webpackChunkName: "pages_widgets_social" */))
 const _98448534 = () => interopDefault(import('..\\pages\\widgets\\statistic.vue' /* webpackChunkName: "pages_widgets_statistic" */))
+const _e35af1fe = () => interopDefault(import('..\\pages\\pasadu\\_pid.vue' /* webpackChunkName: "pages_pasadu__pid" */))
 const _2152c9bd = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
 const _0d921765 = () => interopDefault(import('..\\pages\\_id.vue' /* webpackChunkName: "pages__id" */))
 
@@ -316,6 +317,10 @@ export function createRouter() {
         component: _98448534,
         name: "widgets-statistic"
       }]
+    }, {
+      path: "/pasadu/:pid?",
+      component: _e35af1fe,
+      name: "pasadu-pid"
     }, {
       path: "/",
       component: _2152c9bd,

@@ -79,12 +79,14 @@
                     v-model="complex.selected"
                   >
                     <template slot="items" slot-scope="props">
-                      <td>{{ props.item.pasaduid }}</td>
-                      <td>{{ props.item.noid }}</td>
-                      <td>{{ props.item.name }}</td>
-                      <td>{{ props.item.modem }}</td>
-                      <td>{{ props.item.serialno }}</td>
-                    </template>
+                      <tr @click="showAlert(props.item)">
+                        <td>{{ props.item.pasaduid }}</td>
+                        <td>{{ props.item.noid }}</td>
+                        <td>{{ props.item.name }}</td>
+                        <td>{{ props.item.modem }}</td>
+                        <td>{{ props.item.serialno }}</td>
+                      </tr></template
+                    >
                   </v-data-table>
                 </v-card-text>
               </v-card>
@@ -407,6 +409,11 @@ export default {
         .then(response => {
           this.type_group_name = response.data;
         });
+    },
+    showAlert(a) {
+      // this.$router.plus หน้าต่างเดียวกัน
+      let routeData = this.$router.resolve({ path: `/pasadu/${a.pasaduid}` });
+      window.open(routeData.href, "_blank");
     }
   }
 };
