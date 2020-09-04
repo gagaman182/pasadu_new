@@ -11,6 +11,7 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
+import nuxt_plugin_vuesweetalert2_a92955dc from 'nuxt_plugin_vuesweetalert2_a92955dc' // Source: ./vue-sweetalert2.js (mode: 'client')
 import nuxt_plugin_vuetify_e5914fcc from 'nuxt_plugin_vuetify_e5914fcc' // Source: ..\\plugins\\vuetify (mode: 'all')
 import nuxt_plugin_veevalidate_346f6561 from 'nuxt_plugin_veevalidate_346f6561' // Source: ..\\plugins\\vee-validate (mode: 'all')
 import nuxt_plugin_firebase_362e73fb from 'nuxt_plugin_firebase_362e73fb' // Source: ..\\plugins\\firebase (mode: 'all')
@@ -153,6 +154,10 @@ async function createApp(ssrContext) {
   if (typeof nuxt_plugin_veevalidate_346f6561 === 'function') await nuxt_plugin_veevalidate_346f6561(app.context, inject)
   if (typeof nuxt_plugin_firebase_362e73fb === 'function') await nuxt_plugin_firebase_362e73fb(app.context, inject)
   if (typeof nuxt_plugin_drvueecharts_03e8b3b6 === 'function') await nuxt_plugin_drvueecharts_03e8b3b6(app.context, inject)
+
+  if (process.client) {
+    if (typeof nuxt_plugin_vuesweetalert2_a92955dc === 'function') await nuxt_plugin_vuesweetalert2_a92955dc(app.context, inject)
+  }
 
   // If server-side, wait for async component to be resolved first
   if (process.server && ssrContext && ssrContext.url) {

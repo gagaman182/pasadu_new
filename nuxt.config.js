@@ -60,7 +60,7 @@ module.exports = {
     /*
      ** Nuxt.js modules
      */
-    modules: [],
+    modules: ["vue-sweetalert2/nuxt"],
 
     /*
      ** Build configuration

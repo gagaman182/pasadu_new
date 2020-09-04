@@ -72,13 +72,11 @@
               ref="statDate"
               lazy
               :close-on-content-click="false"
-              v-model="startDateMenu"
               transition="scale-transition"
               offset-y
               full-width
               :nudge-bottom="-22"
               max-width="290px"
-              :return-value.sync="startDate"
             >
               <v-text-field
                 slot="activator"
@@ -152,12 +150,15 @@
     </v-card-text>
     <v-card-actions class="pb-3">
       <v-spacer></v-spacer>
-      <v-btn color="primary">แก้ไข</v-btn>
+      <v-btn color="primary" @click="update_pasadu">{{ status_name }}</v-btn>
     </v-card-actions>
   </v-card>
 </template>
 
 <script>
+import { APIPath } from "@/backend/APIPath";
+const apiPath = new APIPath();
+import axios from "axios";
 export default {
   data: () => ({
     typegroup: [
@@ -201,14 +202,22 @@ export default {
         id: "11",
         name: "เซิฟเวอร์"
       }
-    ]
+    ],
+    message: null,
+    formData: null,
+    message: "Hi"
   }),
   props: {
-    pasadu: String
+    pasadu: [],
+    status_name: {
+      type: String
+    }
   },
-  mounted() {
-    // alert(pasaduid);
-  },
-  methods: {}
+  mounted() {},
+  methods: {
+    update_pasadu() {
+      this.$emit("update-pasadu", { pasadu: this.pasadu });
+    }
+  }
 };
 </script>
