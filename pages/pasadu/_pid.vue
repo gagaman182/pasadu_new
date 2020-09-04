@@ -77,7 +77,20 @@ export default {
           `${apiPath.getBaseUrl()}update_pasadu.php`,
           {
             pasaduid: this.pasadu[0].pasaduid,
-            name: this.pasadu[0].name
+            noid: this.pasadu[0].noid,
+            name: this.pasadu[0].name,
+            modem: this.pasadu[0].modem,
+            serialno: this.pasadu[0].serialno,
+            company: this.pasadu[0].company,
+            type: this.pasadu[0].type,
+            place: this.pasadu[0].place,
+            receive: this.pasadu[0].receive,
+            perunit: this.pasadu[0].perunit,
+            kmoney: this.pasadu[0].kmoney,
+            tmoney: this.pasadu[0].tmoney,
+            engname: this.pasadu[0].engname,
+            status: this.pasadu[0].status,
+            type_group: this.pasadu[0].type_group
           },
           { "Content-type": "application/x-www-form-urlencoded" }
         )

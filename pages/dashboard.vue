@@ -120,7 +120,7 @@
         </v-flex>
         <v-flex lg6 sm12 xs12>
           <v-widget
-            title="ครุภัณฑ์คอมพิวเตอร์จำแนกสถานการใช้งาน"
+            title="ครุภัณฑ์คอมพิวเตอร์จำแนกสถานะการใช้งาน"
             content-bg="white"
           >
             <div slot="widget-content">

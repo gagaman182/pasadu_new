@@ -85,6 +85,11 @@
                         <td>{{ props.item.name }}</td>
                         <td>{{ props.item.modem }}</td>
                         <td>{{ props.item.serialno }}</td>
+                        <td>
+                          <v-chip :color="getColor(props.item.status)" dark>{{
+                            props.item.status
+                          }}</v-chip>
+                        </td>
                       </tr></template
                     >
                   </v-data-table>
@@ -133,6 +138,10 @@ export default {
         {
           text: "ซีเรียลโค้ด",
           value: "serialno"
+        },
+        {
+          text: "สถานะ",
+          value: "status"
         }
       ],
       items: [
@@ -414,6 +423,16 @@ export default {
       // this.$router.plus หน้าต่างเดียวกัน
       let routeData = this.$router.resolve({ path: `/pasadu/${a.pasaduid}` });
       window.open(routeData.href, "_blank");
+    },
+    getColor(status) {
+      if (status == "จำหน่ายแล้ว" || status == "แทงชำรุดแล้ว") return "red";
+      else if (
+        status == "รอจำหน่าย" ||
+        status == "ตรวจสอบข้อมูล" ||
+        status == "รอแทงชำรุด"
+      )
+        return "orange";
+      else return "green";
     }
   }
 };

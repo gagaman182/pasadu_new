@@ -129,9 +129,17 @@
           </v-flex>
 
           <v-flex sm12 lg4>
-            <v-text-field label="สถานะ" name="title" v-model="pasadu[0].status">
-            </v-text-field>
+            <v-select
+              :items="status"
+              v-model="pasadu[0].status"
+              label="สถานะ"
+              auto
+              required
+              item-text="name"
+              item-value="name"
+            ></v-select>
           </v-flex>
+
           <v-flex sm12 lg4>
             <v-select
               :items="typegroup"
@@ -201,6 +209,32 @@ export default {
       {
         id: "11",
         name: "เซิฟเวอร์"
+      }
+    ],
+    status: [
+      {
+        id: "1",
+        name: "ใช้งานปกติ"
+      },
+      {
+        id: "2",
+        name: "แทงชำรุดแล้ว"
+      },
+      {
+        id: "3",
+        name: "รอแทงชำรุด"
+      },
+      {
+        id: "4",
+        name: "รอจำหน่าย"
+      },
+      {
+        id: "5",
+        name: "ตรวจสอบข้อมูล"
+      },
+      {
+        id: "6",
+        name: "จำหน่ายแล้ว"
       }
     ],
     message: null,
