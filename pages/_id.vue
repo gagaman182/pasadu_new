@@ -61,6 +61,14 @@
                     single-line
                     hide-details
                   ></v-text-field>
+                  <v-btn
+                    color="primary"
+                    dark
+                    class="mb-2"
+                    v-bind="attrs"
+                    @click="on"
+                    ><v-icon color="white">add_to_queue</v-icon></v-btn
+                  >
                 </v-card-title>
 
                 <v-card-text class="pa-0">
@@ -433,6 +441,9 @@ export default {
       )
         return "orange";
       else return "green";
+    },
+    on() {
+      $nuxt._router.push("/add");
     }
   }
 };

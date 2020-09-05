@@ -96,12 +96,23 @@ export default {
         )
         .then(response => {
           this.message = response.data;
-          Swal.fire({
-            title: "สถานะอัพเดท",
-            text: this.message[0].message,
-            icon: "success",
-            confirmButtonText: "ตกลง"
-          });
+
+          if (this.message[0].message == "อัพเดทข้อมูลสำเร็จ") {
+            Swal.fire({
+              title: "สถานะอัพเดท",
+              text: this.message[0].message,
+              icon: "success",
+              confirmButtonText: "ตกลง"
+            });
+          } else {
+            Swal.fire({
+              title: "สถานะอัพเดท",
+              text: this.message[0].message,
+              icon: "error",
+              confirmButtonText: "ตกลง"
+            });
+            $nuxt._router.push("/dashboard");
+          }
         });
     }
   }

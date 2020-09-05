@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
+const _6ed652cc = () => interopDefault(import('..\\pages\\add.vue' /* webpackChunkName: "pages_add" */))
 const _0dea7c3d = () => interopDefault(import('..\\pages\\chat.vue' /* webpackChunkName: "pages_chat" */))
 const _2e4279b7 = () => interopDefault(import('..\\pages\\chat\\contact\\_uuid.vue' /* webpackChunkName: "pages_chat_contact__uuid" */))
 const _6bd03b13 = () => interopDefault(import('..\\pages\\chat\\messaging\\_uuid.vue' /* webpackChunkName: "pages_chat_messaging__uuid" */))
@@ -116,6 +117,10 @@ export function createRouter() {
     scrollBehavior,
 
     routes: [{
+      path: "/add",
+      component: _6ed652cc,
+      name: "add"
+    }, {
       path: "/chat",
       component: _0dea7c3d,
       name: "chat",
