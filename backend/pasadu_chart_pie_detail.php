@@ -4,18 +4,38 @@
 	 include 'conn.php';
    $type_group = $_GET["type_group"];
 
- $sql = "SELECT
- pasadu.status as name,
-count(pasadu.pasaduid) as value
+   if($type_group == "all" ){
+    $sql = "SELECT
+    pasadu.status as name,
+   count(pasadu.pasaduid) as value
+   
+   
+   FROM
+    pasadu
+   
+   
+   GROUP BY pasadu.status
+   ORDER BY pasadu.status
+    ";
+    
+   }else{
+    $sql = "SELECT
+    pasadu.status as name,
+   count(pasadu.pasaduid) as value
+   
+   
+   FROM
+    pasadu
+    where type_group = '".$type_group."'
+   
+   GROUP BY pasadu.status
+   ORDER BY pasadu.status
+    ";
+
+   }
 
 
-FROM
- pasadu
- where type_group = '".$type_group."'
-
-GROUP BY pasadu.status
-ORDER BY pasadu.status
- ";
+ 
 
 
 $return_arr = array();

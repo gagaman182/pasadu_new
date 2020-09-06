@@ -3,9 +3,15 @@
    
 	 include 'conn.php';
    $type_group = $_GET["type_group"];
+   if($type_group == "all" ){
+    $sql = "SELECT * from pasadu where pasaduid is not null ";
+    
+   }else{
+    $sql =  $sql = "SELECT * from pasadu where type_group = '".$type_group."' and pasaduid is not null ";
+
+   }
 
 
- $sql = "SELECT * from pasadu where type_group = '".$type_group."' ";
 
 
 $return_arr = array();

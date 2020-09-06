@@ -13,15 +13,17 @@ const Menu = [
         component: "widgets",
         icon: "devices",
         items: [
-            { name: "Social", title: "คอมพิวเตอร์", href: "/1" },
-            { name: "chart", title: "จอมอนิเตอร์", href: "/2" },
-            { name: "list", title: "โน๊ตบุ๊ค", href: "/3" },
-            { name: "list", title: "ออนอินวัน", href: "/5" },
-            { name: "list", title: "ปริ้นเตอร์", href: "/6" },
-            { name: "list", title: "ปริ้นเตอร์เทอมอล", href: "/7" },
-            { name: "list", title: "สแกนเนอร์", href: "/8" },
-            { name: "list", title: "อื่นๆ", href: "/10" },
-            { name: "list", title: "เซิฟเวอร์", href: "/11" }
+            { name: "s1", title: "คอมพิวเตอร์", href: "/1" },
+            { name: "s2", title: "จอมอนิเตอร์", href: "/2" },
+            { name: "s3", title: "โน๊ตบุ๊ค", href: "/3" },
+            { name: "s5", title: "ออนอินวัน", href: "/5" },
+            { name: "s6", title: "ปริ้นเตอร์", href: "/6" },
+            { name: "s7", title: "ปริ้นเตอร์เทอมอล", href: "/7" },
+            { name: "s8", title: "สแกนเนอร์", href: "/8" },
+            { name: "s9", title: "สำรองไฟ", href: "/09" },
+            { name: "s10", title: "อื่นๆ", href: "/10" },
+            { name: "s11", title: "เซิฟเวอร์", href: "/11" },
+            { name: "sall", title: "รวมทั้งหมด", href: "/all" }
         ]
     },
     //   {
@@ -183,15 +185,15 @@ const Menu = [
     //     href: "/empty"
     // }
 ];
-// reorder menu
-Menu.forEach(item => {
-    if (item.items) {
-        item.items.sort((x, y) => {
-            let textA = x.title.toUpperCase();
-            let textB = y.title.toUpperCase();
-            return textA < textB ? -1 : textA > textB ? 1 : 0;
-        });
-    }
-});
+// reorder menu เรียงเมนู ตามตัวอักษร
+// Menu.forEach(item => {
+//     if (item.items) {
+//         item.items.sort((x, y) => {
+//             let textA = x.title.toUpperCase();
+//             let textB = y.title.toUpperCase();
+//             return textA < textB ? -1 : textA > textB ? 1 : 0;
+//         });
+//     }
+// });
 
 export default Menu;

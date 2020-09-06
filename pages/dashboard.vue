@@ -17,7 +17,7 @@
                     class="sm6 xs6 flex text-sm-center py-3 indigo white--text "
                   >
                     <div class="headline">
-                      <span> {{ this.chart_bar[0].data[0].value }} </span>
+                      <span> {{ this.chart_bar[0].data[2].value }} </span>
                     </div>
                     <span class="caption">คอมพิวเตอร์</span>
                   </div>
@@ -40,7 +40,7 @@
                     class="sm6 xs6 flex text-sm-center py-3 red white--text "
                   >
                     <div class="headline">
-                      <span> {{ this.chart_bar[0].data[4].value }} </span>
+                      <span> {{ this.chart_bar[0].data[0].value }} </span>
                     </div>
                     <span class="caption">ปริ้นเตอร์</span>
                   </div>
@@ -65,7 +65,7 @@
                     class="sm6 xs6 flex text-sm-center py-3 light-blue white--text "
                   >
                     <div class="headline">
-                      <span> {{ this.chart_bar[0].data[1].value }} </span>
+                      <span> {{ this.chart_bar[0].data[4].value }} </span>
                     </div>
                     <span class="caption">จอมอนิเตอร์</span>
                   </div>
@@ -90,7 +90,7 @@
                     class="sm6 xs6 flex text-sm-center py-3 purple darken-2 white--text "
                   >
                     <div class="headline">
-                      <span> {{ this.chart_bar[0].data[7].value }} </span>
+                      <span> {{ this.chart_bar[0].data[3].value }} </span>
                     </div>
                     <span class="caption">สำรองไฟ</span>
                   </div>

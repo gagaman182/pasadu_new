@@ -4,16 +4,33 @@
 	 include 'conn.php';
    $type_group = $_GET["type_group"];
 
- $sql = "SELECT
- DATE_FORMAT(RECEIVE,'%Y') as label,
- count(pasaduid)as value
-FROM
- pasadu
-where  DATE_FORMAT(RECEIVE,'%Y')  <> ''
-and type_group = '".$type_group."' 
-GROUP BY DATE_FORMAT(RECEIVE,'%Y')
-ORDER BY DATE_FORMAT(RECEIVE,'%Y')
- ";
+   if($type_group == "all" ){
+    $sql = "SELECT
+    DATE_FORMAT(RECEIVE,'%Y') as label,
+    count(pasaduid)as value
+   FROM
+    pasadu
+   where  DATE_FORMAT(RECEIVE,'%Y')  <> ''
+   
+   GROUP BY DATE_FORMAT(RECEIVE,'%Y')
+   ORDER BY DATE_FORMAT(RECEIVE,'%Y')
+    ";
+    
+   }else{
+    $sql = "SELECT
+    DATE_FORMAT(RECEIVE,'%Y') as label,
+    count(pasaduid)as value
+   FROM
+    pasadu
+   where  DATE_FORMAT(RECEIVE,'%Y')  <> ''
+   and type_group = '".$type_group."' 
+   GROUP BY DATE_FORMAT(RECEIVE,'%Y')
+   ORDER BY DATE_FORMAT(RECEIVE,'%Y')
+    ";
+
+   }
+
+ 
 
 
 $return_arr = array();

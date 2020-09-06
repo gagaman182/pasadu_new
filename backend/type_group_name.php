@@ -4,6 +4,7 @@
 	 include 'conn.php';
 
    $type_group = $_GET["type_group"];
+   
 
  $sql = "SELECT * FROM typecom
 where id = '".$type_group."' 

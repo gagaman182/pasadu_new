@@ -64,7 +64,7 @@
                   <v-btn
                     color="primary"
                     dark
-                    class="mb-2"
+                    class="mb-1"
                     v-bind="attrs"
                     @click="on"
                     ><v-icon color="white">add_to_queue</v-icon></v-btn

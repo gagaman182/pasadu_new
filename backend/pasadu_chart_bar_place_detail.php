@@ -4,20 +4,40 @@
 	 include 'conn.php';
    $type_group = $_GET["type_group"];
 
- $sql = "SELECT
- pasadu.place AS label,
- count(typecom.id) AS value
-FROM
- pasadu
-INNER JOIN typecom ON pasadu.type_group = typecom.id
-WHERE
- type_group = '".$type_group."' 
-GROUP BY
- pasadu.place
-ORDER BY
- count(typecom.id)DESC
-LIMIT 10
- ";
+   if($type_group == "all" ){
+    $sql = "SELECT
+    pasadu.place AS label,
+    count(typecom.id) AS value
+   FROM
+    pasadu
+   INNER JOIN typecom ON pasadu.type_group = typecom.id
+  
+   GROUP BY
+    pasadu.place
+   ORDER BY
+    count(typecom.id)DESC
+   LIMIT 10
+    ";
+    
+   }else{
+    $sql = "SELECT
+    pasadu.place AS label,
+    count(typecom.id) AS value
+   FROM
+    pasadu
+   INNER JOIN typecom ON pasadu.type_group = typecom.id
+   WHERE
+    type_group = '".$type_group."' 
+   GROUP BY
+    pasadu.place
+   ORDER BY
+    count(typecom.id)DESC
+   LIMIT 10
+    ";
+
+   }
+
+ 
 
 
 $return_arr = array();
