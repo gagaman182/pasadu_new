@@ -157,6 +157,7 @@
       </v-form>
     </v-card-text>
     <v-card-actions class="pb-3">
+      <v-btn color="primary" @click="back_pasadu">กลับ</v-btn>
       <v-spacer></v-spacer>
       <v-btn color="primary" @click="update_pasadu">{{ status_name }}</v-btn>
       <v-btn color="error" @click="delete_pasadu">{{ status_name2 }}</v-btn>
@@ -258,6 +259,9 @@ export default {
     },
     delete_pasadu() {
       this.$emit("delete-pasadu", { pasadu_id: this.pasadu[0].pasaduid });
+    },
+    back_pasadu() {
+      $nuxt._router.push(`/${this.pasadu[0].type_group}`);
     }
   }
 };

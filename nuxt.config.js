@@ -81,6 +81,6 @@ module.exports = {
     },
     // setให้สามารถ run คำสั่ง npm run generate แล้วได้ ไฟล์ dist เอาข้างในไป ใส่ใน path ที่เราต้องการ
     router: {
-        base: "/"
+        base: "/pasaduweb"
     }
 };

@@ -52,8 +52,9 @@
             <div slot="widget-content">
               <v-card>
                 <v-card-title>
-                  ครุภัณฑ์คอมพิวเตอร์ - คอมพิวเตอร์
+                  <h4>{{ this.complex.items[0].name }}</h4>
                   <v-spacer></v-spacer>
+
                   <v-text-field
                     v-model="search"
                     append-icon="search"
@@ -359,14 +360,14 @@ export default {
         ]
       }
     ],
-    type_group_name: null
+    type_group_name: ""
   }),
   mounted() {
+    this.fetch_type_group_name();
     this.fetch_table();
     this.fetch_chart_pie_detail();
     this.fetch_chart_line_detail();
     this.fetch_chart_bar_place_detail();
-    this.fetch_type_group_name();
   },
   methods: {
     //แสดงตาราง
@@ -429,8 +430,11 @@ export default {
     },
     showAlert(a) {
       // this.$router.plus หน้าต่างเดียวกัน
-      let routeData = this.$router.resolve({ path: `/pasadu/${a.pasaduid}` });
-      window.open(routeData.href, "_blank");
+      // let routeData = this.$router.resolve({ path: `/pasadu/${a.pasaduid}` });
+      // window.open(routeData.href, "_blank");
+
+      // this.$router.plus({ path: `/pasadu/${a.pasaduid}` });
+      $nuxt._router.push(`/pasadu/${a.pasaduid}`);
     },
     getColor(status) {
       if (status == "จำหน่ายแล้ว" || status == "แทงชำรุดแล้ว") return "red";

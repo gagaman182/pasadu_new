@@ -4,10 +4,14 @@
 	 include 'conn.php';
    $type_group = $_GET["type_group"];
    if($type_group == "all" ){
-    $sql = "SELECT * from pasadu where pasaduid is not null ";
+    $sql = "SELECT * from pasadu
+    inner join typecom on pasadu.type_group = typecom.id
+     where pasaduid is not null ";
     
    }else{
-    $sql =  $sql = "SELECT * from pasadu where type_group = '".$type_group."' and pasaduid is not null ";
+    $sql =  $sql = "SELECT * from pasadu 
+    inner join typecom on pasadu.type_group = typecom.id
+    where type_group = '".$type_group."' and pasaduid is not null ";
 
    }
 

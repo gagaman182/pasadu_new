@@ -54,7 +54,8 @@ export default {
       message: "",
       status_name: "แก้ไข",
       status_name2: "ลบ",
-      pasadu_delete: ""
+      pasadu_delete: "",
+      group_type_params: this.$route.params.pid
     };
   },
   mounted() {
