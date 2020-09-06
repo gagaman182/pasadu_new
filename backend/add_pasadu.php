@@ -23,7 +23,7 @@
 
  include 'conn.php';
 
- 
+
 
 
 $query = "INSERT INTO pasadu (pasaduid, noid, name, modem, serialno, company,type,place,receive,perunit,kmoney,tmoney,engname,status,type_group)
@@ -46,7 +46,8 @@ if ($result = mysqli_query( $conn, $query )){
 
 mysqli_close($conn);
 
+ 
 echo json_encode($return_arr);
 
-
+ 
 ?>

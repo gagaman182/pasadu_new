@@ -159,6 +159,7 @@
     <v-card-actions class="pb-3">
       <v-spacer></v-spacer>
       <v-btn color="primary" @click="update_pasadu">{{ status_name }}</v-btn>
+      <v-btn color="error" @click="delete_pasadu">{{ status_name2 }}</v-btn>
     </v-card-actions>
   </v-card>
 </template>
@@ -245,12 +246,18 @@ export default {
     pasadu: [],
     status_name: {
       type: String
+    },
+    status_name2: {
+      type: String
     }
   },
   mounted() {},
   methods: {
     update_pasadu() {
       this.$emit("update-pasadu", { pasadu: this.pasadu });
+    },
+    delete_pasadu() {
+      this.$emit("delete-pasadu", { pasadu_id: this.pasadu[0].pasaduid });
     }
   }
 };

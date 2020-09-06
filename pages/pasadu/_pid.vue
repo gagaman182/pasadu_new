@@ -5,8 +5,10 @@
         <v-flex lg12>
           <pasadu-detail
             @update-pasadu="setpasadu"
+            @delete-pasadu="deletepasadu"
             :pasadu="pasadu"
             :status_name="status_name"
+            :status_name2="status_name2"
           ></pasadu-detail>
         </v-flex>
       </v-layout>
@@ -50,7 +52,9 @@ export default {
         }
       ],
       message: "",
-      status_name: "อัพเดท"
+      status_name: "แก้ไข",
+      status_name2: "ลบ",
+      pasadu_delete: ""
     };
   },
   mounted() {
@@ -107,6 +111,38 @@ export default {
           } else {
             Swal.fire({
               title: "สถานะอัพเดท",
+              text: this.message[0].message,
+              icon: "error",
+              confirmButtonText: "ตกลง"
+            });
+            $nuxt._router.push("/dashboard");
+          }
+        });
+    },
+    deletepasadu(payload) {
+      this.pasadu_delete = payload.pasadu_id;
+
+      axios
+        .post(
+          `${apiPath.getBaseUrl()}delete_pasadu.php`,
+          {
+            pasaduid: this.pasadu_delete
+          },
+          { "Content-type": "application/x-www-form-urlencoded" }
+        )
+        .then(response => {
+          this.message = response.data;
+          if (this.message[0].message == "ลบข้อมูลสำเร็จ") {
+            Swal.fire({
+              title: "สถานะลบ",
+              text: this.message[0].message,
+              icon: "success",
+              confirmButtonText: "ตกลง"
+            });
+            $nuxt._router.push("/dashboard");
+          } else {
+            Swal.fire({
+              title: "สถานะลบ",
               text: this.message[0].message,
               icon: "error",
               confirmButtonText: "ตกลง"
