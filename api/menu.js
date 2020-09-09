@@ -20,7 +20,7 @@ const Menu = [
             { name: "s6", title: "ปริ้นเตอร์", href: "/6" },
             { name: "s7", title: "ปริ้นเตอร์เทอมอล", href: "/7" },
             { name: "s8", title: "สแกนเนอร์", href: "/8" },
-            { name: "s9", title: "สำรองไฟ", href: "/09" },
+            { name: "s9", title: "สำรองไฟ", href: "/9" },
             { name: "s10", title: "อื่นๆ", href: "/10" },
             { name: "s11", title: "เซิฟเวอร์", href: "/11" },
             { name: "sall", title: "รวมทั้งหมด", href: "/all" }

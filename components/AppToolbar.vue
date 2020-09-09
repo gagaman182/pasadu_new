@@ -3,6 +3,7 @@
     <v-toolbar-title class="ml-0 pl-3">
       <v-toolbar-side-icon @click.stop="toggleDrawer()"></v-toolbar-side-icon>
     </v-toolbar-title>
+    <h3>โรงพยาบาลหาดใหญ่</h3>
     <v-spacer></v-spacer>
 
     <span class="hidden-sm-and-down">{{ this.user.email }}</span>

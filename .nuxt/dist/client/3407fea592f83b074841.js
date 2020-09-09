@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[45],{1527:function(t,e,n){"use strict";n.r(e);var o={mounted:function(){this.$router.push("/dashboard")}},r=n(13),component=Object(r.a)(o,function(){var t=this.$createElement;return(this._self._c||t)("div")},[],!1,null,"a83b1c9e",null);e.default=component.exports}}]);
