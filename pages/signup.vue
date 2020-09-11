@@ -38,7 +38,7 @@
               <v-card-actions>
                 <nuxt-link to="/login">เข้าสู่ระบบ</nuxt-link>
                 <v-spacer></v-spacer>
-                <v-btn block color="primary" @click="login" :loading="loading"
+                <v-btn block color="primary" @click="signup" :loading="loading"
                   >ลงทะเบียน</v-btn
                 >
               </v-card-actions>

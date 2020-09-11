@@ -2,59 +2,59 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
-const _6ed652cc = () => interopDefault(import('..\\pages\\add.vue' /* webpackChunkName: "pages_add" */))
-const _0dea7c3d = () => interopDefault(import('..\\pages\\chat.vue' /* webpackChunkName: "pages_chat" */))
-const _2e4279b7 = () => interopDefault(import('..\\pages\\chat\\contact\\_uuid.vue' /* webpackChunkName: "pages_chat_contact__uuid" */))
-const _6bd03b13 = () => interopDefault(import('..\\pages\\chat\\messaging\\_uuid.vue' /* webpackChunkName: "pages_chat_messaging__uuid" */))
-const _132df8ff = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages_dashboard" */))
-const _5ec7bcb4 = () => interopDefault(import('..\\pages\\dashboard copy.vue' /* webpackChunkName: "pages_dashboard copy" */))
-const _52a8d043 = () => interopDefault(import('..\\pages\\dashboard2.vue' /* webpackChunkName: "pages_dashboard2" */))
-const _065d1e90 = () => interopDefault(import('..\\pages\\empty.vue' /* webpackChunkName: "pages_empty" */))
-const _834392cc = () => interopDefault(import('..\\pages\\forms.vue' /* webpackChunkName: "pages_forms" */))
-const _54357826 = () => interopDefault(import('..\\pages\\forms\\basic-forms.vue' /* webpackChunkName: "pages_forms_basic-forms" */))
-const _69399efc = () => interopDefault(import('..\\pages\\forms\\editors.vue' /* webpackChunkName: "pages_forms_editors" */))
-const _1e6dc11e = () => interopDefault(import('..\\pages\\forms\\selection-controls.vue' /* webpackChunkName: "pages_forms_selection-controls" */))
-const _9d812666 = () => interopDefault(import('..\\pages\\forms\\selects.vue' /* webpackChunkName: "pages_forms_selects" */))
-const _0febea5c = () => interopDefault(import('..\\pages\\forms\\steppers.vue' /* webpackChunkName: "pages_forms_steppers" */))
-const _f0af4da2 = () => interopDefault(import('..\\pages\\forms\\text-fields.vue' /* webpackChunkName: "pages_forms_text-fields" */))
-const _3b0a2613 = () => interopDefault(import('..\\pages\\general.vue' /* webpackChunkName: "pages_general" */))
-const _4c26a5aa = () => interopDefault(import('..\\pages\\general\\alerts.vue' /* webpackChunkName: "pages_general_alerts" */))
-const _571d7b37 = () => interopDefault(import('..\\pages\\general\\avatars.vue' /* webpackChunkName: "pages_general_avatars" */))
-const _1a20e7c3 = () => interopDefault(import('..\\pages\\general\\badges.vue' /* webpackChunkName: "pages_general_badges" */))
-const _52de5604 = () => interopDefault(import('..\\pages\\general\\buttons.vue' /* webpackChunkName: "pages_general_buttons" */))
-const _6cf9d120 = () => interopDefault(import('..\\pages\\general\\cards.vue' /* webpackChunkName: "pages_general_cards" */))
-const _3df6fb60 = () => interopDefault(import('..\\pages\\general\\carousels.vue' /* webpackChunkName: "pages_general_carousels" */))
-const _7c841d64 = () => interopDefault(import('..\\pages\\general\\chips.vue' /* webpackChunkName: "pages_general_chips" */))
-const _2692ac03 = () => interopDefault(import('..\\pages\\general\\colors.vue' /* webpackChunkName: "pages_general_colors" */))
-const _40d95ca8 = () => interopDefault(import('..\\pages\\general\\dialogs.vue' /* webpackChunkName: "pages_general_dialogs" */))
-const _28b48957 = () => interopDefault(import('..\\pages\\general\\icons.vue' /* webpackChunkName: "pages_general_icons" */))
-const _3f0f8bad = () => interopDefault(import('..\\pages\\general\\pagination.vue' /* webpackChunkName: "pages_general_pagination" */))
-const _1f869dea = () => interopDefault(import('..\\pages\\general\\parallax.vue' /* webpackChunkName: "pages_general_parallax" */))
-const _8a3e1100 = () => interopDefault(import('..\\pages\\general\\progress.vue' /* webpackChunkName: "pages_general_progress" */))
-const _3bfd38af = () => interopDefault(import('..\\pages\\general\\sliders.vue' /* webpackChunkName: "pages_general_sliders" */))
-const _3cacf258 = () => interopDefault(import('..\\pages\\general\\snackbar.vue' /* webpackChunkName: "pages_general_snackbar" */))
-const _fff0ab10 = () => interopDefault(import('..\\pages\\general\\tables.vue' /* webpackChunkName: "pages_general_tables" */))
-const _c2e746ba = () => interopDefault(import('..\\pages\\general\\tooltips.vue' /* webpackChunkName: "pages_general_tooltips" */))
-const _7d9c127c = () => interopDefault(import('..\\pages\\general\\typography.vue' /* webpackChunkName: "pages_general_typography" */))
-const _e1dcddea = () => interopDefault(import('..\\pages\\house.vue' /* webpackChunkName: "pages_house" */))
-const _2a0b2658 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages_login" */))
-const _90beb1c8 = () => interopDefault(import('..\\pages\\mail.vue' /* webpackChunkName: "pages_mail" */))
-const _66905386 = () => interopDefault(import('..\\pages\\mail\\0\\_uuid.vue' /* webpackChunkName: "pages_mail_0__uuid" */))
-const _120091f8 = () => interopDefault(import('..\\pages\\mail\\_mailType.vue' /* webpackChunkName: "pages_mail__mailType" */))
-const _5ded9062 = () => interopDefault(import('..\\pages\\media.vue' /* webpackChunkName: "pages_media" */))
-const _7376ff60 = () => interopDefault(import('..\\pages\\pickers.vue' /* webpackChunkName: "pages_pickers" */))
-const _208f578c = () => interopDefault(import('..\\pages\\pickers\\datepicker.vue' /* webpackChunkName: "pages_pickers_datepicker" */))
-const _7ca89feb = () => interopDefault(import('..\\pages\\pickers\\timepicker.vue' /* webpackChunkName: "pages_pickers_timepicker" */))
-const _7ea5ca86 = () => interopDefault(import('..\\pages\\signup.vue' /* webpackChunkName: "pages_signup" */))
-const _5dafa8bf = () => interopDefault(import('..\\pages\\tee.vue' /* webpackChunkName: "pages_tee" */))
-const _5ea25f4c = () => interopDefault(import('..\\pages\\widgets.vue' /* webpackChunkName: "pages_widgets" */))
-const _8c34d818 = () => interopDefault(import('..\\pages\\widgets\\chart.vue' /* webpackChunkName: "pages_widgets_chart" */))
-const _e6309810 = () => interopDefault(import('..\\pages\\widgets\\list.vue' /* webpackChunkName: "pages_widgets_list" */))
-const _a86b9a72 = () => interopDefault(import('..\\pages\\widgets\\social.vue' /* webpackChunkName: "pages_widgets_social" */))
-const _98448534 = () => interopDefault(import('..\\pages\\widgets\\statistic.vue' /* webpackChunkName: "pages_widgets_statistic" */))
-const _e35af1fe = () => interopDefault(import('..\\pages\\pasadu\\_pid.vue' /* webpackChunkName: "pages_pasadu__pid" */))
-const _2152c9bd = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
-const _0d921765 = () => interopDefault(import('..\\pages\\_id.vue' /* webpackChunkName: "pages__id" */))
+const _5ecfebaf = () => interopDefault(import('..\\pages\\add.vue' /* webpackChunkName: "pages_add" */))
+const _1d23ffba = () => interopDefault(import('..\\pages\\chat.vue' /* webpackChunkName: "pages_chat" */))
+const _09f13998 = () => interopDefault(import('..\\pages\\chat\\contact\\_uuid.vue' /* webpackChunkName: "pages_chat_contact__uuid" */))
+const _1b00b950 = () => interopDefault(import('..\\pages\\chat\\messaging\\_uuid.vue' /* webpackChunkName: "pages_chat_messaging__uuid" */))
+const _0087c8bc = () => interopDefault(import('..\\pages\\dashboard.vue' /* webpackChunkName: "pages_dashboard" */))
+const _b08da63a = () => interopDefault(import('..\\pages\\dashboard copy.vue' /* webpackChunkName: "pages_dashboard copy" */))
+const _1041fc00 = () => interopDefault(import('..\\pages\\dashboard2.vue' /* webpackChunkName: "pages_dashboard2" */))
+const _566f464a = () => interopDefault(import('..\\pages\\empty.vue' /* webpackChunkName: "pages_empty" */))
+const _d355ba86 = () => interopDefault(import('..\\pages\\forms.vue' /* webpackChunkName: "pages_forms" */))
+const _199ec63a = () => interopDefault(import('..\\pages\\forms\\basic-forms.vue' /* webpackChunkName: "pages_forms_basic-forms" */))
+const _4056aa39 = () => interopDefault(import('..\\pages\\forms\\editors.vue' /* webpackChunkName: "pages_forms_editors" */))
+const _2608c7d8 = () => interopDefault(import('..\\pages\\forms\\selection-controls.vue' /* webpackChunkName: "pages_forms_selection-controls" */))
+const _ef470fec = () => interopDefault(import('..\\pages\\forms\\selects.vue' /* webpackChunkName: "pages_forms_selects" */))
+const _1c7046bf = () => interopDefault(import('..\\pages\\forms\\steppers.vue' /* webpackChunkName: "pages_forms_steppers" */))
+const _26a37dec = () => interopDefault(import('..\\pages\\forms\\text-fields.vue' /* webpackChunkName: "pages_forms_text-fields" */))
+const _1e12d514 = () => interopDefault(import('..\\pages\\general.vue' /* webpackChunkName: "pages_general" */))
+const _58ab020d = () => interopDefault(import('..\\pages\\general\\alerts.vue' /* webpackChunkName: "pages_general_alerts" */))
+const _49b6a998 = () => interopDefault(import('..\\pages\\general\\avatars.vue' /* webpackChunkName: "pages_general_avatars" */))
+const _26a54426 = () => interopDefault(import('..\\pages\\general\\badges.vue' /* webpackChunkName: "pages_general_badges" */))
+const _5a9804fb = () => interopDefault(import('..\\pages\\general\\buttons.vue' /* webpackChunkName: "pages_general_buttons" */))
+const _4416dc5d = () => interopDefault(import('..\\pages\\general\\cards.vue' /* webpackChunkName: "pages_general_cards" */))
+const _7fffa70d = () => interopDefault(import('..\\pages\\general\\carousels.vue' /* webpackChunkName: "pages_general_carousels" */))
+const _53a128a1 = () => interopDefault(import('..\\pages\\general\\chips.vue' /* webpackChunkName: "pages_general_chips" */))
+const _33170866 = () => interopDefault(import('..\\pages\\general\\colors.vue' /* webpackChunkName: "pages_general_colors" */))
+const _763ee6b6 = () => interopDefault(import('..\\pages\\general\\dialogs.vue' /* webpackChunkName: "pages_general_dialogs" */))
+const _005cd6d8 = () => interopDefault(import('..\\pages\\general\\icons.vue' /* webpackChunkName: "pages_general_icons" */))
+const _7f78fe90 = () => interopDefault(import('..\\pages\\general\\pagination.vue' /* webpackChunkName: "pages_general_pagination" */))
+const _1c656d8d = () => interopDefault(import('..\\pages\\general\\parallax.vue' /* webpackChunkName: "pages_general_parallax" */))
+const _908071ba = () => interopDefault(import('..\\pages\\general\\progress.vue' /* webpackChunkName: "pages_general_progress" */))
+const _7ff72ea8 = () => interopDefault(import('..\\pages\\general\\sliders.vue' /* webpackChunkName: "pages_general_sliders" */))
+const _398bc1fb = () => interopDefault(import('..\\pages\\general\\snackbar.vue' /* webpackChunkName: "pages_general_snackbar" */))
+const _e6e7f24a = () => interopDefault(import('..\\pages\\general\\tables.vue' /* webpackChunkName: "pages_general_tables" */))
+const _c929a774 = () => interopDefault(import('..\\pages\\general\\tooltips.vue' /* webpackChunkName: "pages_general_tooltips" */))
+const _019b69a5 = () => interopDefault(import('..\\pages\\general\\typography.vue' /* webpackChunkName: "pages_general_typography" */))
+const _67087d2e = () => interopDefault(import('..\\pages\\house.vue' /* webpackChunkName: "pages_house" */))
+const _7a1d4e12 = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages_login" */))
+const _724baace = () => interopDefault(import('..\\pages\\mail.vue' /* webpackChunkName: "pages_mail" */))
+const _3dad5ec3 = () => interopDefault(import('..\\pages\\mail\\0\\_uuid.vue' /* webpackChunkName: "pages_mail_0__uuid" */))
+const _03841367 = () => interopDefault(import('..\\pages\\mail\\_mailType.vue' /* webpackChunkName: "pages_mail__mailType" */))
+const _adffb81c = () => interopDefault(import('..\\pages\\media.vue' /* webpackChunkName: "pages_media" */))
+const _7c30efb3 = () => interopDefault(import('..\\pages\\pickers.vue' /* webpackChunkName: "pages_pickers" */))
+const _60f8ca6f = () => interopDefault(import('..\\pages\\pickers\\datepicker.vue' /* webpackChunkName: "pages_pickers_datepicker" */))
+const _85dbda64 = () => interopDefault(import('..\\pages\\pickers\\timepicker.vue' /* webpackChunkName: "pages_pickers_timepicker" */))
+const _30d89a0c = () => interopDefault(import('..\\pages\\signup.vue' /* webpackChunkName: "pages_signup" */))
+const _4da941a2 = () => interopDefault(import('..\\pages\\tee.vue' /* webpackChunkName: "pages_tee" */))
+const _f2c98086 = () => interopDefault(import('..\\pages\\widgets.vue' /* webpackChunkName: "pages_widgets" */))
+const _ddfac19e = () => interopDefault(import('..\\pages\\widgets\\chart.vue' /* webpackChunkName: "pages_widgets_chart" */))
+const _6a8dcd1b = () => interopDefault(import('..\\pages\\widgets\\list.vue' /* webpackChunkName: "pages_widgets_list" */))
+const _8f62e1ac = () => interopDefault(import('..\\pages\\widgets\\social.vue' /* webpackChunkName: "pages_widgets_social" */))
+const _52d8e223 = () => interopDefault(import('..\\pages\\widgets\\statistic.vue' /* webpackChunkName: "pages_widgets_statistic" */))
+const _82798504 = () => interopDefault(import('..\\pages\\pasadu\\_pid.vue' /* webpackChunkName: "pages_pasadu__pid" */))
+const _0d6c9440 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
+const _04e89f70 = () => interopDefault(import('..\\pages\\_id.vue' /* webpackChunkName: "pages__id" */))
 
 Vue.use(Router)
 
@@ -118,221 +118,221 @@ export function createRouter() {
 
     routes: [{
       path: "/add",
-      component: _6ed652cc,
+      component: _5ecfebaf,
       name: "add"
     }, {
       path: "/chat",
-      component: _0dea7c3d,
+      component: _1d23ffba,
       name: "chat",
       children: [{
         path: "contact/:uuid?",
-        component: _2e4279b7,
+        component: _09f13998,
         name: "chat-contact-uuid"
       }, {
         path: "messaging/:uuid?",
-        component: _6bd03b13,
+        component: _1b00b950,
         name: "chat-messaging-uuid"
       }]
     }, {
       path: "/dashboard",
-      component: _132df8ff,
+      component: _0087c8bc,
       name: "dashboard"
     }, {
       path: "/dashboard copy",
-      component: _5ec7bcb4,
+      component: _b08da63a,
       name: "dashboard copy"
     }, {
       path: "/dashboard2",
-      component: _52a8d043,
+      component: _1041fc00,
       name: "dashboard2"
     }, {
       path: "/empty",
-      component: _065d1e90,
+      component: _566f464a,
       name: "empty"
     }, {
       path: "/forms",
-      component: _834392cc,
+      component: _d355ba86,
       name: "forms",
       children: [{
         path: "basic-forms",
-        component: _54357826,
+        component: _199ec63a,
         name: "forms-basic-forms"
       }, {
         path: "editors",
-        component: _69399efc,
+        component: _4056aa39,
         name: "forms-editors"
       }, {
         path: "selection-controls",
-        component: _1e6dc11e,
+        component: _2608c7d8,
         name: "forms-selection-controls"
       }, {
         path: "selects",
-        component: _9d812666,
+        component: _ef470fec,
         name: "forms-selects"
       }, {
         path: "steppers",
-        component: _0febea5c,
+        component: _1c7046bf,
         name: "forms-steppers"
       }, {
         path: "text-fields",
-        component: _f0af4da2,
+        component: _26a37dec,
         name: "forms-text-fields"
       }]
     }, {
       path: "/general",
-      component: _3b0a2613,
+      component: _1e12d514,
       name: "general",
       children: [{
         path: "alerts",
-        component: _4c26a5aa,
+        component: _58ab020d,
         name: "general-alerts"
       }, {
         path: "avatars",
-        component: _571d7b37,
+        component: _49b6a998,
         name: "general-avatars"
       }, {
         path: "badges",
-        component: _1a20e7c3,
+        component: _26a54426,
         name: "general-badges"
       }, {
         path: "buttons",
-        component: _52de5604,
+        component: _5a9804fb,
         name: "general-buttons"
       }, {
         path: "cards",
-        component: _6cf9d120,
+        component: _4416dc5d,
         name: "general-cards"
       }, {
         path: "carousels",
-        component: _3df6fb60,
+        component: _7fffa70d,
         name: "general-carousels"
       }, {
         path: "chips",
-        component: _7c841d64,
+        component: _53a128a1,
         name: "general-chips"
       }, {
         path: "colors",
-        component: _2692ac03,
+        component: _33170866,
         name: "general-colors"
       }, {
         path: "dialogs",
-        component: _40d95ca8,
+        component: _763ee6b6,
         name: "general-dialogs"
       }, {
         path: "icons",
-        component: _28b48957,
+        component: _005cd6d8,
         name: "general-icons"
       }, {
         path: "pagination",
-        component: _3f0f8bad,
+        component: _7f78fe90,
         name: "general-pagination"
       }, {
         path: "parallax",
-        component: _1f869dea,
+        component: _1c656d8d,
         name: "general-parallax"
       }, {
         path: "progress",
-        component: _8a3e1100,
+        component: _908071ba,
         name: "general-progress"
       }, {
         path: "sliders",
-        component: _3bfd38af,
+        component: _7ff72ea8,
         name: "general-sliders"
       }, {
         path: "snackbar",
-        component: _3cacf258,
+        component: _398bc1fb,
         name: "general-snackbar"
       }, {
         path: "tables",
-        component: _fff0ab10,
+        component: _e6e7f24a,
         name: "general-tables"
       }, {
         path: "tooltips",
-        component: _c2e746ba,
+        component: _c929a774,
         name: "general-tooltips"
       }, {
         path: "typography",
-        component: _7d9c127c,
+        component: _019b69a5,
         name: "general-typography"
       }]
     }, {
       path: "/house",
-      component: _e1dcddea,
+      component: _67087d2e,
       name: "house"
     }, {
       path: "/login",
-      component: _2a0b2658,
+      component: _7a1d4e12,
       name: "login"
     }, {
       path: "/mail",
-      component: _90beb1c8,
+      component: _724baace,
       name: "mail",
       children: [{
         path: "0/:uuid?",
-        component: _66905386,
+        component: _3dad5ec3,
         name: "mail-0-uuid"
       }, {
         path: ":mailType?",
-        component: _120091f8,
+        component: _03841367,
         name: "mail-mailType"
       }]
     }, {
       path: "/media",
-      component: _5ded9062,
+      component: _adffb81c,
       name: "media"
     }, {
       path: "/pickers",
-      component: _7376ff60,
+      component: _7c30efb3,
       name: "pickers",
       children: [{
         path: "datepicker",
-        component: _208f578c,
+        component: _60f8ca6f,
         name: "pickers-datepicker"
       }, {
         path: "timepicker",
-        component: _7ca89feb,
+        component: _85dbda64,
         name: "pickers-timepicker"
       }]
     }, {
       path: "/signup",
-      component: _7ea5ca86,
+      component: _30d89a0c,
       name: "signup"
     }, {
       path: "/tee",
-      component: _5dafa8bf,
+      component: _4da941a2,
       name: "tee"
     }, {
       path: "/widgets",
-      component: _5ea25f4c,
+      component: _f2c98086,
       name: "widgets",
       children: [{
         path: "chart",
-        component: _8c34d818,
+        component: _ddfac19e,
         name: "widgets-chart"
       }, {
         path: "list",
-        component: _e6309810,
+        component: _6a8dcd1b,
         name: "widgets-list"
       }, {
         path: "social",
-        component: _a86b9a72,
+        component: _8f62e1ac,
         name: "widgets-social"
       }, {
         path: "statistic",
-        component: _98448534,
+        component: _52d8e223,
         name: "widgets-statistic"
       }]
     }, {
       path: "/pasadu/:pid?",
-      component: _e35af1fe,
+      component: _82798504,
       name: "pasadu-pid"
     }, {
       path: "/",
-      component: _2152c9bd,
+      component: _0d6c9440,
       name: "index"
     }, {
       path: "/:id",
-      component: _0d921765,
+      component: _04e89f70,
       name: "id"
     }],
 

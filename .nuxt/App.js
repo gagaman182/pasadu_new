@@ -17,7 +17,7 @@ import _2d26a6ad from '..\\layouts\\mail.vue'
 const layouts = { "_chat": _2d22344e,"_dashboard": _5fa3735e,"_default": _6f6c098b,"_mail": _2d26a6ad }
 
 export default {
-  head: {"title":"Vue Material Admin Template","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Vue Material Admin Template is a \n    Google Material Design inspired admin dashboard template built with Vue and Vuetify."}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:300,400,500,700|Material+Icons"}],"script":[{"src":"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fecharts\u002F4.0.4\u002Fecharts-en.min.js"}],"style":[]},
+  head: {"title":"ระบบครุภัณฑ์คอมพิวเตอร์โรงพยาบาลหาดใหญ่","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"ระบบครุภัณฑ์คอมพิวเตอร์โรงพยาบาลหาดใหญ่ \n   ระบบครุภัณฑ์คอมพิวเตอร์โรงพยาบาลหาดใหญ่"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:300,400,500,700|Material+Icons"}],"script":[{"src":"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fecharts\u002F4.0.4\u002Fecharts-en.min.js"}],"style":[]},
 
   render(h, props) {
     const loadingEl = h('NuxtLoading', { ref: 'loading' })
@@ -110,8 +110,6 @@ export default {
     },
 
     setLayout(layout) {
-      if(layout && typeof layout !== 'string') throw new Error('[nuxt] Avoid using non-string value as layout property.')
-
       if (!layout || !layouts['_' + layout]) {
         layout = 'default'
       }
